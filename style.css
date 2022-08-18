@@ -1,10 +1,32 @@
+:root{
+ /*   - Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)*/
+    --errorRed: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrayishViolet: hsl(270, 3%, 87%);
+    --darkGrayishViolet: hsl(279, 6%, 55%);
+    --veryDarkViolet: hsl(278, 68%, 11%);
+}
+
 body{
     font-size: 18px;
     font-weight: 500;
     font-family: 'Space Grotesk', sans-serif;
 }
 
+#card-container{
+    position: relative;
+    margin-top: 300px;
+    margin-left: 300px;
+}
+
+
+
 #card-front{
+    position: absolute;
+    z-index: 2;
+    right: 56px;
+    
+
     width: 287px;
     height: 157px;
 
@@ -16,6 +38,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    color: var(--lightGrayishViolet);
 }
 
 #card-logo{
@@ -53,5 +77,23 @@ body{
 
 
 #card-back{
-    background-image: url()
+    position: absolute;
+    top: 63px;
+
+    width: 287px;
+    height: 157px;
+
+    background-image: url("./images/bg-card-back.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    position: relative;
+    color: var(--white);
+}
+
+#card-cvc{
+    font-size: 0.62em;
+    position: absolute;
+    top: 70px;
+    right: 38px;
 }
