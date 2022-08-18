@@ -16,6 +16,21 @@ body{
     background-color: var(--white);
 }
 
+
+#card-image-section{
+
+    width: 100%;
+    min-height: 240px;
+    background: url("./images/bg-main-mobile.png") no-repeat;
+    background-size: 100%;
+    overflow: visible;
+    position: relative;
+
+    margin-bottom: 47px; /*to avoid stuff overlapping the card*/
+
+}
+
+
 #card-container{
     position: absolute;
     top: 159px;
@@ -97,21 +112,14 @@ body{
     color: var(--white);
 }
 
-#card-cvc{
+#card-img-cvc{
     font-size: 0.62em;
     position: absolute;
     top: 70px;
     right: 38px;
 }
 
-#card-image-section{
-    height: 240px;
-    background: url("./images/bg-main-mobile.png") no-repeat;
-    overflow: visible;
 
-    margin-bottom: 47px; /*to avoid stuff overlapping the card*/
-
-}
 
 #payment-form{
     margin: 90px 45px auto 25px;
