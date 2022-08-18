@@ -11,11 +11,12 @@ body{
     font-size: 18px;
     font-weight: 500;
     font-family: 'Space Grotesk', sans-serif;
+    margin: 0px;
 }
 
 #card-container{
     position: absolute;
-    top: 50%;
+    top: 159px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -100,3 +101,13 @@ body{
     top: 70px;
     right: 38px;
 }
+
+#card-image-section{
+    height: 400px;
+    background: url("./images/bg-main-mobile.png") no-repeat;
+    overflow: visible;
+
+
+
+}
+
