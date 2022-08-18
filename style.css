@@ -14,9 +14,10 @@ body{
 }
 
 #card-container{
-    position: relative;
-    margin-top: 300px;
-    margin-left: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -24,7 +25,8 @@ body{
 #card-front{
     position: absolute;
     z-index: 2;
-    right: 56px;
+    top: 127px;
+    right: 29px;
     
 
     width: 287px;
@@ -78,7 +80,8 @@ body{
 
 #card-back{
     position: absolute;
-    top: 63px;
+    bottom: 127px;
+    left: 29px;
 
     width: 287px;
     height: 157px;
