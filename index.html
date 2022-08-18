@@ -25,30 +25,41 @@
           <div id="card-img-date">00/00</div>
         </div>
       </div>
-    
+
       <div id="card-back">
         <div id="card-cvc">000</div>
       </div>
     </div>
   </div>
 
-  <div></div>
+  <form id="payment-form">
+    <label>Cardholder Name</label>
+    <input id="name-input" type="text" placeholder="e.g. Jane Appleseed">
 
+    <label>Card Number</label>
+    <input id="card-number-input" type="text" placeholder="e.g. 1234 5678 9123 0000">
 
-  Cardholder Name
-  e.g. Jane Appleseed
+    
+    <div id="date-cvc-input-row">
+      <div id="date-input-section">
+        <label>Exp. Date (MM/YY)</label>
+        <input id="expiry-month-input" type="text" placeholder="MM">
+        <input id="expiry-year-input" type="text" placeholder="YY">
+      </div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+      <div id="date-input-section">
+        <label>CVC</label>
+        <input id="cvc-input" type="text" placeholder="123">
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+      </div>
+    </div>
 
-  CVC
-  e.g. 123
 
   Confirm
+  </form>
+
+
+  
 
   <!-- Completed state start -->
 
