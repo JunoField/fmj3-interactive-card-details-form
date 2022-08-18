@@ -1,0 +1,57 @@
+body{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+#card-front{
+    width: 287px;
+    height: 157px;
+
+    background-image: url("./images/bg-card-front.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#card-logo{
+    align-self: flex;
+    max-width: 55px;
+    margin: 18px auto auto 20px;
+}
+
+#card-img-number{
+    align-self: center;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+
+#card-bottom-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: 0.62em;
+
+    margin-bottom: 20px;
+}
+
+#card-img-name{
+    margin-left: 24px;
+    text-transform: uppercase;
+}
+
+#card-img-date{
+    margin-right: 22px;
+}
+
+
+#card-back{
+    background-image: url()
+}
