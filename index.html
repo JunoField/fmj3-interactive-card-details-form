@@ -36,29 +36,29 @@
 
   <form id="payment-form">
     <label>Cardholder Name</label>
-    <input id="name-input" type="text" placeholder="e.g. Jane Appleseed" oninput="updateCardImg('name')">
+    <input id="name-input" type="text" placeholder="e.g. Jane Appleseed" oninput="updateName()" autocomplete="off">
 
     <label>Card Number</label>
-    <input id="number-input" type="tel" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" oninput="updateCardNumber()" maxlength="19">
+    <input id="number-input" type="tel" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" oninput="updateCardNumber()" maxlength="19" autocomplete="off">
 
     
     <div id="date-cvc-input-row">
       <div id="date-input-section">
         <label>Exp. Date (MM/YY)</label>
         <div id="date-input-subsection">
-          <input id="expiry-month-input" type="tel" placeholder="MM" oninput="updateExpiryMonth()" inputmode="numeric" maxlength="2">
-          <input id="expiry-year-input" type="tel" placeholder="YY" oninput="updateCardImg('date')" inputmode="numeric" maxlength="2">
+          <input id="expiry-month-input" type="tel" placeholder="MM" oninput="updateExpiryMonth()" inputmode="numeric" maxlength="2" autocomplete="off">
+          <input id="expiry-year-input" type="tel" placeholder="YY" oninput="updateExpiryYear()" inputmode="numeric" maxlength="2" autocomplete="off">
         </div>
       </div>
 
       <div id="cvc-input-section">
         <label>CVC</label>
-        <input id="cvc-input" type="text" placeholder="e.g. 123" oninput="updateCardImg('cvc')" maxlength="3">
+        <input id="cvc-input" type="text" placeholder="e.g. 123" oninput="updateCVC()" maxlength="3" autocomplete="off">
 
       </div>
     </div>
 
-    <input type="submit" value="Confirm" id="confirm-button">
+    <input type="button" value="Confirm" id="confirm-button">
   </form>
 
 
