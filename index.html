@@ -13,6 +13,7 @@
   <title>Frontend Mentor | Interactive card details form</title>
 
   <script src="./cardUpdate.js" defer></script>
+  <script src="./submitValidation.js" defer></script>
 
 </head>
 <body>
@@ -43,8 +44,8 @@
 
     <label>Card Number</label>
     <input id="number-input" type="tel" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" oninput="updateCardNumber()" maxlength="19" autocomplete="off">
-    <div class="error-msg hidden" id="error-msg-number-fmt">Wrong format, numbers only</div>
-    <div class="error-msg hidden" id="error-msg-number-empty">Can't be blank</div>
+    <div class="error-msg hidden" id="error-msg-number">Wrong format, numbers only</div>
+
 
     
     <div id="date-cvc-input-row">
@@ -64,7 +65,7 @@
       </div>
     </div>
 
-    <input type="button" class="button" value="Confirm" id="confirm-button" onclick="openCompleteState()">
+    <input type="button" class="button" value="Confirm" id="confirm-button" onclick="beginValidation()">
   </form>
 
 

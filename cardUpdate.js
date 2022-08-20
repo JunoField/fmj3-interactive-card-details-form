@@ -66,7 +66,3 @@ function updateCVC(){
 
 
 
-function openCompleteState(){
-    document.getElementById("payment-form").classList.add("hidden");
-    document.getElementById("complete-state").classList.remove("hidden");
-}
