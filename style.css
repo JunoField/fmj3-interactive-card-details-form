@@ -38,21 +38,21 @@ body{
     transform: translate(-50%, -50%);
 }
 
+.card{
+    width: 287px;
+    height: 157px;
 
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 
 #card-front{
-    position: absolute;
     z-index: 2;
     top: 127px;
     right: 29px;
     
-
-    width: 287px;
-    height: 157px;
-
     background-image: url("./images/bg-card-front.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+
 
     position: relative;
     display: flex;
@@ -97,16 +97,11 @@ body{
 
 
 #card-back{
-    position: absolute;
     bottom: 127px;
     left: 29px;
 
-    width: 287px;
-    height: 157px;
-
     background-image: url("./images/bg-card-back.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+
 
     position: relative;
     color: var(--white);
@@ -248,13 +243,31 @@ input{
 }
 
 
-
-
-
-
 #attribution{
     position: absolute;
     bottom: 0px;
     right: 0px;
     font-size: 10px;
+}
+
+
+@media only screen and (min-width: 1000px){
+    body{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    #card-image-section{
+        width: unset;
+        height: 100vh;
+        min-width: 33.5%;
+        background-image: url("./images/bg-main-desktop.png");
+        background-size: 100%;
+        margin-bottom: unset;
+
+    }
+
+
+
 }
