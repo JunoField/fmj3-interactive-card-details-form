@@ -63,3 +63,10 @@ function updateCVC(){
     document.getElementById("cvc-input").value = cvc;
     updateCardImg("cvc");
 }
+
+
+
+function openCompleteState(){
+    document.getElementById("payment-form").classList.add("hidden");
+    document.getElementById("complete-state").classList.remove("hidden");
+}
