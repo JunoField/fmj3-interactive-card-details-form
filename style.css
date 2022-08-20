@@ -189,6 +189,13 @@ body{
     min-height: 51px;
 }
 
+#confirm-button:hover{
+    border: 2px solid var(--veryDarkViolet);
+    color: var(--veryDarkViolet);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
 
 
 #attribution{
