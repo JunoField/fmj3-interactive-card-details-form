@@ -16,12 +16,22 @@ function throwError(input, message){
 }
 
 function resetErrors(){
-    
+    var standardInputs = ["name", "number", "cvc"];
+    standardInputs.forEach((input) => {
+        document.getElementById("error-msg-" + input).classList.add("hidden");
+        document.getElementById(input + "-input").classList.remove("input-error-state");
+    });
+
+    document.getElementById("expiry-month-input").classList.remove("input-error-state");
+    document.getElementById("expiry-year-input").classList.remove("input-error-state");
+    document.getElementById("error-msg-expiry").classList.add("hidden");
+
 }
 
 
 function beginValidation(){
     let isError = false;
+    resetErrors();
 
     //check name is not empty:
     if (isEmpty(document.getElementById("name-input"))){
