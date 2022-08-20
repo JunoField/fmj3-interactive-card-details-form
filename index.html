@@ -37,10 +37,14 @@
   <form id="payment-form">
     <label>Cardholder Name</label>
     <input id="name-input" type="text" placeholder="e.g. Jane Appleseed" oninput="updateName()" autocomplete="off">
+    <div class="error-msg-hidden" id="error-msg-name">Can't be blank</div>
+
+
 
     <label>Card Number</label>
     <input id="number-input" type="tel" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" oninput="updateCardNumber()" maxlength="19" autocomplete="off">
-    <div class="error-msg-hidden">Wrong format, numbers only</div>
+    <div class="error-msg-hidden" id="error-msg-number-fmt">Wrong format, numbers only</div>
+    <div class="error-msg-hidden" id="error-msg-number-empty">Can't be blank</div>
 
     
     <div id="date-cvc-input-row">
@@ -50,12 +54,13 @@
           <input id="expiry-month-input" type="tel" placeholder="MM" oninput="updateExpiryMonth()" inputmode="numeric" maxlength="2" autocomplete="off">
           <input id="expiry-year-input" type="tel" placeholder="YY" oninput="updateExpiryYear()" inputmode="numeric" maxlength="2" autocomplete="off">
         </div>
+        <div class="error-msg-hidden" id="error-msg-date">Can't be blank</div>
       </div>
 
       <div id="cvc-input-section">
         <label>CVC</label>
         <input id="cvc-input" type="text" placeholder="e.g. 123" oninput="updateCVC()" maxlength="3" autocomplete="off">
-
+        <div class="error-msg-hidden" id="error-msg-cvc">Can't be blank</div>
       </div>
     </div>
 
