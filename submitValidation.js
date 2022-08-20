@@ -2,53 +2,66 @@ function isEmpty(str){
     return !str.value.trim().length
 }
 
+function throwError(input, message){    
+    document.getElementById("error-msg-" + input).innerHTML = message;
+    document.getElementById("error-msg-" + input).classList.remove("hidden");
+    if (input == "expiry"){
+        document.getElementById("expiry-month-input").classList.add("input-error-state");
+        document.getElementById("expiry-year-input").classList.add("input-error-state");
+    } else{
+        document.getElementById(input + "-input").classList.add("input-error-state");
+    }
+
+    
+}
+
+function resetErrors(){
+    
+}
+
+
 function beginValidation(){
     let isError = false;
 
     //check name is not empty:
     if (isEmpty(document.getElementById("name-input"))){
-        document.getElementById("error-msg-name").classList.remove("hidden");
+        throwError("name", "Can't be blank");
         isError = true;
     }
 
     //check card number is not empty and is the correct format:
     if (isEmpty(document.getElementById("number-input"))){
-        document.getElementById("error-msg-number").innerHTML = "Can't be blank";
-        document.getElementById("error-msg-number").classList.remove("hidden");
+        throwError("number", "Can't be blank");
         isError = true;
-    } else if(!document.getElementById("number-input").value.replace(/ /g,'').match(/\d{16}/) ){ //check for a 16 digit no
-        document.getElementById("error-msg-number").innerHTML = "Wrong format, numbers only";
-        document.getElementById("error-msg-number").classList.remove("hidden");
+    } else if(!document.getElementById("number-input").value.replace(/ /g,'').match(/\d{16}/) ){ //check for a 16 digit number
+        throwError("number", "Wrong format, numbers only");
         isError = true;
     }
 
     //check expiry date is not empty and is not in the past:
     if (isEmpty(document.getElementById("expiry-month-input")) || isEmpty(document.getElementById("expiry-year-input"))){
-        document.getElementById("error-msg-date").innerHTML = "Can't be blank";
-        document.getElementById("error-msg-date").classList.remove("hidden");
+        throwError("expiry", "Can't be blank")
         isError = true;
     } else{
         var currentDate = new Date();
         var currentMonth = currentDate.getUTCMonth() + 1;
         var currentYear = currentDate.getUTCFullYear() - 2000;
         /*"Get your great grandchlidren to fix this one day" - a user on stack overflow*/
+
         var month = parseInt(document.getElementById("expiry-month-input").value);
         var year = parseInt(document.getElementById("expiry-year-input").value);
         if (currentYear > year || (currentYear == year && currentMonth > month)){
-            document.getElementById("error-msg-date").innerHTML = "Card expired";
-            document.getElementById("error-msg-date").classList.remove("hidden");
+            throwError("expiry", "Card expired");
             isError = true;
         }
     }
 
     //check cvc is valid:
     if (isEmpty(document.getElementById("cvc-input"))){
-        document.getElementById("error-msg-cvc").innerHTML = "Can't be blank";
-        document.getElementById("error-msg-cvc").classList.remove("hidden");
+        throwError("cvc", "Can't be blank");
         isError = true;
-    } else if (document.getElementById("cvc-input").length != 3 || isNaN(document.getElementById("cvc-input"))){
-        document.getElementById("error-msg-cvc").innerHTML = "Must be 3 digits";
-        document.getElementById("error-msg-cvc").classList.remove("hidden");
+    } else if (document.getElementById("cvc-input").value.length != 3 || isNaN(document.getElementById("cvc-input").value)){
+        throwError("cvc", "Must be 3 digits");
         isError = true;
     }
 
