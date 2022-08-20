@@ -268,6 +268,27 @@ input{
 
     }
 
+    #card-container{
+        top: 50%;
+        left: 100%;
+    }
+
+    .card{
+        width: 449px;
+        height: 247px;
+    }
+
+    #card-front{
+        top: unset;
+        right: 21%;
+        margin-bottom: 36px;
+    }
+
+    #card-back{
+        bottom: unset;
+        left: unset;
+    }
+
 
 
 }
