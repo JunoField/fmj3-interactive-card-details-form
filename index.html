@@ -39,21 +39,21 @@
     <input id="name-input" type="text" placeholder="e.g. Jane Appleseed" oninput="updateCardImg('name')">
 
     <label>Card Number</label>
-    <input id="number-input" type="text" placeholder="e.g. 1234 5678 9123 0000" oninput="updateCardImg('number')">
+    <input id="number-input" type="tel" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" oninput="updateCardNumber()" maxlength="19">
 
     
     <div id="date-cvc-input-row">
       <div id="date-input-section">
         <label>Exp. Date (MM/YY)</label>
         <div id="date-input-subsection">
-          <input id="expiry-month-input" type="text" placeholder="MM" oninput="updateCardImg('date')">
-          <input id="expiry-year-input" type="text" placeholder="YY" oninput="updateCardImg('date')">
+          <input id="expiry-month-input" type="tel" placeholder="MM" oninput="updateExpiryMonth()" inputmode="numeric" maxlength="2">
+          <input id="expiry-year-input" type="tel" placeholder="YY" oninput="updateCardImg('date')" inputmode="numeric" maxlength="2">
         </div>
       </div>
 
       <div id="cvc-input-section">
         <label>CVC</label>
-        <input id="cvc-input" type="text" placeholder="e.g. 123" oninput="updateCardImg(cvc)">
+        <input id="cvc-input" type="text" placeholder="e.g. 123" oninput="updateCardImg('cvc')" maxlength="3">
 
       </div>
     </div>
