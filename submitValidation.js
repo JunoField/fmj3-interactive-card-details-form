@@ -1,3 +1,11 @@
+document.onkeydown = (e => {
+    e = e || window.event;
+    if ((e.which || e.keyCode) == 13) {
+        beginValidation();
+    }
+  })
+
+
 function isEmpty(str){
     return !str.value.trim().length
 }
@@ -80,6 +88,7 @@ function beginValidation(){
     }
 
 }
+
 
 
 function openCompleteState(){

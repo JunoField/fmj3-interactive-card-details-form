@@ -114,12 +114,14 @@ body{
     right: 38px;
 }
 
+.main-content{
+    letter-spacing: 2px;
+    display: block;
+    box-sizing: border-box;
+}
 
 .payment-form{
     margin: 84px 25px auto 25px;
-    box-sizing: border-box;
-    display: block;
-    letter-spacing: 2px;
     color:var(--veryDarkViolet);
 
 
@@ -212,12 +214,9 @@ input{
     border: 2px solid var(--errorRed);
 }
 
-#complete-state{
+.complete-state{
     text-align: center;
-    display: block;
-    box-sizing: border-box;
     margin: 90px 25px auto 25px;
-    letter-spacing: 2px;
 
 }
 
@@ -322,9 +321,7 @@ input{
         right: 58px;
     }
 
-
-
-    .payment-form{
+    .main-content{
         margin: unset;
         align-self: center;
         width: 26.5%;
@@ -361,12 +358,6 @@ input{
         border-width: 1px;
     }
 
-    #complete-state{
-        margin: unset;
-        align-self: center;
-        width: 26.5%;
-        margin-left: 8.5%;
-    }
 
     #thank-you-text{
         margin-top: 16px;
