@@ -284,9 +284,28 @@ input{
         margin-bottom: 36px;
     }
 
+    #card-logo{
+        margin: 28px auto auto 31px;
+        max-width: 87px;
+    }
+
+    #card-img-number{
+        font-size: 1.6em;
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+    }
+
+    
+
     #card-back{
         bottom: unset;
         left: unset;
+    }
+
+    #card-img-cvc{
+        font-size: 0.8em;
+        top: 112px;
+        right: 58px;
     }
 
 
