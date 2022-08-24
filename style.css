@@ -361,6 +361,15 @@ input{
         border-width: 1px;
     }
 
-    
+    #complete-state{
+        margin: unset;
+        align-self: center;
+        width: 26.5%;
+        margin-left: 8.5%;
+    }
+
+    #thank-you-text{
+        margin-top: 16px;
+    }
 
 }
