@@ -292,10 +292,24 @@ input{
     #card-img-number{
         font-size: 1.6em;
         letter-spacing: 3px;
-        margin-bottom: 30px;
+        margin-bottom: 27px;
     }
 
-    
+    #card-bottom-row{
+        font-size: 0.8em;
+        letter-spacing: 1.8px;
+        margin-bottom: 26px;
+    }
+
+    #card-img-name{
+        margin-left: 36px;
+    }
+
+    #card-img-date{
+        margin-right: 28px;
+    }
+
+
 
     #card-back{
         bottom: unset;
