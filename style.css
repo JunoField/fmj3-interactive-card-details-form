@@ -265,7 +265,7 @@ input{
         background-image: url("./images/bg-main-desktop.png");
         background-size: 100%;
         margin-bottom: unset;
-
+        margin-right: 230px; /*prevent elements from overlapping card*/
     }
 
     #card-container{
@@ -322,6 +322,34 @@ input{
         right: 58px;
     }
 
+
+
+    .payment-form{
+        margin: unset;
+        align-self: center;
+        width: 26.5%;
+        margin-left: 8.5%;
+    }
+
+    input{
+        margin-bottom: 20px;
+    }
+
+    #date-input-subsection{
+        margin-right: 20px;
+    }
+
+    #cvc-input-section{
+        margin-left: 0px;
+    }
+
+    .button{
+        min-height: 52px;
+    }
+
+    #confirm-button{
+        margin-top: 20px;
+    }
 
 
 }
