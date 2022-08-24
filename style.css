@@ -351,5 +351,16 @@ input{
         margin-top: 20px;
     }
 
+    .error-msg{
+        font-family: unset;
+        margin-left: 0px;
+        margin-bottom: 27px;
+    }
+
+    .input-error-state{
+        border-width: 1px;
+    }
+
+    
 
 }
